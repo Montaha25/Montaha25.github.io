@@ -208,74 +208,70 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="md:col-span-1">
-          <h2 class="text-2xl font-bold">Projects</h2>
-          <p class="mt-2 text-[var(--subtle)]">Selected work.</p>
-        </div>
-        <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
-          <article class="rounded-2xl border bg-white p-6 flex flex-col">
-<h3 class="font-semibold">Automated Candidate Screening Agent (ADSP)</h3>
-<p class="mt-2 text-sm text-[var(--subtle)]">
-AI-powered recruitment assistant enhancing fairness, transparency, and efficiency.
-Features a hybrid explainable AI model for CV–job matching, bias detection, and feedback automation.
-Built to empower recruiters, candidates, and employment advisors alike.
-</p>
+</article>
+
+
+<!-- LexiLearn -->
+<article class="rounded-2xl border bg-white p-6 flex flex-col">
+<img src="lexilearn.jpg" alt="LexiLearn" class="rounded-xl mb-4 object-cover w-full h-40" />
+<h3 class="font-semibold text-lg">LexiLearn (ESPRIT)</h3>
+<p class="mt-2 text-sm text-[var(--subtle)]">Hybrid platform for dyslexic students: JavaFX desktop, Symfony web, MySQL backend.</p>
 <div class="mt-4 flex flex-wrap gap-2">
-<span class="tag rounded-lg px-2 py-1 text-xs">NLP</span>
-<span class="tag rounded-lg px-2 py-1 text-xs">Machine Learning</span>
-<span class="tag rounded-lg px-2 py-1 text-xs">Explainable AI</span>
-<span class="tag rounded-lg px-2 py-1 text-xs">HR Tech</span>
+<span class="tag rounded-lg px-2 py-1 text-xs">JavaFX</span>
+<span class="tag rounded-lg px-2 py-1 text-xs">Symfony</span>
+<span class="tag rounded-lg px-2 py-1 text-xs">MySQL</span>
+</div>
+<button onclick="toggleDetails(this)" class="mt-4 text-indigo-600 font-medium hover:underline">View More</button>
+<div class="collapsible max-h-0 opacity-0 overflow-hidden transition-all duration-300 mt-0 text-sm text-[var(--ink)] space-y-2">
+<p>Exercises, progress tracking, and teacher dashboards with accessibility‑first design.</p>
+<a href="#" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-white text-sm font-medium shadow-sm hover:opacity-95">🔗 Demo / Code</a>
 </div>
 </article>
-          <article class="rounded-2xl border bg-white p-6 flex flex-col">
-            <h3 class="font-semibold">Lung Cancer Detection</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Desktop app with U‑Net (segmentation), DenseNet (binary), EfficientNetB3 (type) + GUI + automatic report.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag rounded-lg px-2 py-1 text-xs">TensorFlow</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">Flask API</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">Python</span>
-            </div>
-          </article>
-          <article class="rounded-2xl border bg-white p-6 flex flex-col">
-            <h3 class="font-semibold">Brain Tumor Classification</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">CNNs to detect & categorize tumor types from MRI; early‑diagnosis aid.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag rounded-lg px-2 py-1 text-xs">CNN</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">Python</span>
-            </div>
-          </article>
-          <article class="rounded-2xl border bg-white p-6 flex flex-col">
-            <h3 class="font-semibold">Churn Prediction Model</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Built & compared RF, Logistic Regression, XGBoost; high accuracy & recall; clear visualizations.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag rounded-lg px-2 py-1 text-xs">scikit‑learn</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">Matplotlib</span>
-            </div>
-          </article>
-          <article class="rounded-2xl border bg-white p-6 flex flex-col">
-            <h3 class="font-semibold">LexiLearn (ESPRIT)</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Hybrid platform for dyslexic students: JavaFX desktop, Symfony web, MySQL backend.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag rounded-lg px-2 py-1 text-xs">JavaFX</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">Symfony</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">MySQL</span>
-            </div>
-          </article>
-          <article class="rounded-2xl border bg-white p-6 flex flex-col">
-            <h3 class="font-semibold">Smart Irrigation System</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Embedded IoT with moisture/temperature sensors, mobile app, and alerts for efficient watering.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag rounded-lg px-2 py-1 text-xs">IoT</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">Mobile</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+<!-- Smart Irrigation System -->
+<article class="rounded-2xl border bg-white p-6 flex flex-col">
+<img src="irrigation.jpg" alt="Smart Irrigation" class="rounded-xl mb-4 object-cover w-full h-40" />
+<h3 class="font-semibold text-lg">Smart Irrigation System</h3>
+<p class="mt-2 text-sm text-[var(--subtle)]">Embedded IoT with moisture/temperature sensors, mobile app, and alerts for efficient watering.</p>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="tag rounded-lg px-2 py-1 text-xs">IoT</span>
+<span class="tag rounded-lg px-2 py-1 text-xs">Mobile</span>
+</div>
+<button onclick="toggleDetails(this)" class="mt-4 text-indigo-600 font-medium hover:underline">View More</button>
+<div class="collapsible max-h-0 opacity-0 overflow-hidden transition-all duration-300 mt-0 text-sm text-[var(--ink)] space-y-2">
+<p>Low‑power sensors, threshold‑based control, and push notifications for remote monitoring.</p>
+<a href="#" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-white text-sm font-medium shadow-sm hover:opacity-95">🔗 Demo / Code</a>
+</div>
+</article>
+
+
+</div>
+</div>
+</div>
+</section>
+<script>
+function toggleDetails(button) {
+const details = button.nextElementSibling;
+if (!details) return;
+const isClosed = details.classList.contains('max-h-0');
+if (isClosed) {
+details.classList.remove('max-h-0','opacity-0');
+details.classList.add('max-h-[1000px]','opacity-100','mt-4');
+button.textContent = 'Hide Details';
+button.setAttribute('aria-expanded','true');
+} else {
+details.classList.add('max-h-0','opacity-0');
+details.classList.remove('max-h-[1000px]','opacity-100','mt-4');
+button.textContent = 'View More';
+button.setAttribute('aria-expanded','false');
+}
+}
+const yEl = document.getElementById('y');
+if (yEl) { yEl.textContent = new Date().getFullYear(); }
+</script>
+</body>
+</html>
 
   <!-- Skills -->
   <section id="skills" class="section">
