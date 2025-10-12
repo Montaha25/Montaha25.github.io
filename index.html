@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Calistoga&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root{
+  <style type="text/css">
+    :root {
       --bg: #f8fafc;            /* slate-50 */
       --soft-1: #eef2ff;        /* indigo-50 */
       --soft-2: #faf5ff;        /* purple-50 */
@@ -22,11 +22,302 @@
       --subtle: #475569;        /* slate-600 */
       --brand: #6d28d9;         /* violet-700 */
       --brand-soft: #a78bfa;    /* violet-300 */
+      --anim-duration: 0.3s;    /* Default animation duration */
     }
+  </style>
+  <style type="text/css">
+    /* Base animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Reveal animations */
+    .reveal {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .reveal.active[data-effect="fade-up"] {
+      animation: fadeInUp var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="fade"] {
+      animation: fadeIn var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="scale"] {
+      animation: scaleIn var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="fade-left"] {
+      animation: fadeLeft var(--anim-duration) ease forwards;
+    }
+
+    /* Add smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Base animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Reveal animations */
+    .reveal {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .reveal.active[data-effect="fade-up"] {
+      animation: fadeInUp var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="fade"] {
+      animation: fadeIn var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="scale"] {
+      animation: scaleIn var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="fade-left"] {
+      animation: fadeLeft var(--anim-duration) ease forwards;
+    }
+
+    /* Add smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Base animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Reveal animations */
+    .reveal {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .reveal.active[data-effect="fade-up"] {
+      animation: fadeInUp var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="fade"] {
+      animation: fadeIn var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="scale"] {
+      animation: scaleIn var(--anim-duration) ease forwards;
+    }
+
+    .reveal.active[data-effect="fade-left"] {
+      animation: fadeLeft var(--anim-duration) ease forwards;
+    }
+
+    /* Add smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Animation classes */
+    .animate-fade-in { animation: fadeIn 0.5s ease-out; }
+    .animate-fade-up { animation: fadeInUp 0.5s ease-out; }
+    .animate-scale-in { animation: scaleIn 0.5s ease-out; }
+    .animate-slide-left { animation: slideInLeft 0.5s ease-out; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+
+    /* Scroll reveal animations */
+    .reveal {
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal[data-effect="fade-up"] { transform: translateY(20px); }
+    .reveal[data-effect="fade-left"] { transform: translateX(-20px); }
+    .reveal[data-effect="fade-right"] { transform: translateX(20px); }
+    .reveal[data-effect="scale"] { transform: scale(0.9); }
+
+    /* Enhanced base styles */
     html{scroll-behavior:smooth}
-    .glass{backdrop-filter:saturate(140%) blur(8px);}
-    .tag{box-shadow: inset 0 0 0 1px rgba(99,102,241,.15)}
-    .section{scroll-margin-top: 96px}
+    .glass{
+      backdrop-filter:saturate(140%) blur(8px);
+      transition: background-color var(--anim-duration) ease;
+    }
+    .glass:hover {
+      background-color: rgba(255,255,255,0.85);
+    }
+    .tag{
+      box-shadow: inset 0 0 0 1px rgba(99,102,241,.15);
+      transition: all var(--anim-duration) ease;
+    }
+    .tag:hover {
+      transform: translateY(-2px);
+      box-shadow: inset 0 0 0 1px rgba(99,102,241,.3), 0 4px 10px rgba(99,102,241,.1);
+    }
+    .section{
+      scroll-margin-top: 96px;
+      position: relative;
+    }
+    
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+    .modal-content {
+      position: relative;
+      background-color: white;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 1rem;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .close-modal {
+      position: absolute;
+      right: 1.5rem;
+      top: 1.5rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--subtle);
+    }
   </style>
 </head>
 <body class="bg-[var(--bg)] text-[var(--ink)] antialiased">
@@ -62,43 +353,53 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div class="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p class="inline-flex items-center gap-2 text-xs font-medium text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full">
-              <span class="h-2 w-2 rounded-full bg-indigo-400"></span> Data Science & Software Engineering
+            <p class="inline-flex items-center gap-2 text-xs font-medium text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full animate-fade-in">
+              <span class="h-2 w-2 rounded-full bg-indigo-400 animate-pulse"></span> Data Science & Software Engineering
             </p>
-            <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-              Turning data into reliable <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">products</span>
+            <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight reveal" data-effect="fade-up">
+              Turning data into reliable 
+              <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent animate-float">products</span>
             </h1>
-            <p class="mt-5 text-lg text-[var(--subtle)] max-w-2xl">Second‑year Data Science Engineering student at ESPRIT. Hands‑on with ML/DL, NLP, and Flutter. I build practical AI features, solid pipelines, and clean user experiences.</p>
-            <div class="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-3 text-white font-medium shadow-sm hover:opacity-95">View Projects</a>
-              <a href="mailto:rebhi.montaha@esprit.tn" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 tag bg-white/70 hover:bg-white">Email me</a>
-              <a href="https://www.linkedin.com/in/montaha-rebhi-88373a22b/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 tag bg-white/70 hover:bg-white">LinkedIn</a>
+            <p class="mt-5 text-lg text-[var(--subtle)] max-w-2xl reveal" data-effect="fade-up" style="animation-delay: 0.2s">
+              Final‑year Data Science Engineering student at ESPRIT Looking for End-of-Studies Internship . Hands‑on with ML/DL, NLP, and Flutter. I build practical AI features, solid pipelines, and clean user experiences.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-3 reveal" data-effect="fade-up" style="animation-delay: 0.4s">
+              <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-3 text-white font-medium shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5">
+                View Projects
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a href="mailto:rebhi.montaha@esprit.tn" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 tag bg-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/10">Email me</a>
+              <a href="https://www.linkedin.com/in/montaha-rebhi-88373a22b/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 tag bg-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/10">LinkedIn</a>
             </div>
           </div>
           <div class="lg:justify-self-end">
-            <!-- ADDED PROFILE IMAGE (upload montaha.jpg to repo root) -->
-           <img src="montaha.png" alt="Montaha Rebhi"
-     class="rounded-full w-56 h-56 object-cover border-4 border-white shadow-lg mb-6 mx-auto" />
+            <!-- Professional Profile Image -->
+            <div class="relative reveal" data-effect="scale">
+              <img src="montaha.png" alt="Montaha Rebhi"
+                class="relative rounded-full w-56 h-56 object-cover border-[3px] border-white/90 shadow-[0_0_15px_rgba(0,0,0,0.1)] mb-6 mx-auto transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5" />
+            </div>
 
-            <div class="relative">
-              <div class="absolute -inset-1 bg-gradient-to-r from-indigo-200 to-violet-200 rounded-3xl blur"></div>
-              <div class="relative rounded-3xl border bg-white/80 p-6 shadow-sm">
+            <div class="relative reveal" data-effect="fade-left">
+              <div class="absolute -inset-1 bg-gradient-to-r from-indigo-200 to-violet-200 rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="relative rounded-3xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
                 <dl class="grid grid-cols-2 gap-6">
-                  <div>
-                    <dt class="text-sm text-[var(--subtle)]">Based in</dt>
-                    <dd class="text-xl font-semibold">Tunisia</dd>
+                  <div class="group transition-all duration-300 hover:-translate-y-1">
+                    <dt class="text-sm text-[var(--subtle)] group-hover:text-indigo-600 transition-colors duration-300">Based in</dt>
+                    <dd class="text-xl font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Germany</dd>
                   </div>
-                  <div>
-                    <dt class="text-sm text-[var(--subtle)]">Open to</dt>
-                    <dd class="text-xl font-semibold">Internships • Projects</dd>
+                  <div class="group transition-all duration-300 hover:-translate-y-1">
+                    <dt class="text-sm text-[var(--subtle)] group-hover:text-violet-600 transition-colors duration-300">Open to</dt>
+                    <dd class="text-xl font-semibold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Internships • Projects</dd>
                   </div>
-                  <div>
-                    <dt class="text-sm text-[var(--subtle)]">Focus</dt>
-                    <dd class="text-xl font-semibold">ML • DL • NLP • Flutter</dd>
+                  <div class="group transition-all duration-300 hover:-translate-y-1">
+                    <dt class="text-sm text-[var(--subtle)] group-hover:text-purple-600 transition-colors duration-300">Focus</dt>
+                    <dd class="text-xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">ML • DL • NLP • Flutter</dd>
                   </div>
-                  <div>
-                    <dt class="text-sm text-[var(--subtle)]">Languages</dt>
-                    <dd class="text-xl font-semibold">Arabic • French • English</dd>
+                  <div class="group transition-all duration-300 hover:-translate-y-1">
+                    <dt class="text-sm text-[var(--subtle)] group-hover:text-indigo-600 transition-colors duration-300">Languages</dt>
+                    <dd class="text-xl font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Arabic • French • English</dd>
                   </div>
                 </dl>
               </div>
@@ -112,24 +413,36 @@
   <section id="about" class="section">
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
 <div class="grid md:grid-cols-3 gap-8">
-<div class="md:col-span-1">
-<h2 class="text-2xl font-bold">About</h2>
+<div class="md:col-span-1 reveal" data-effect="fade-up">
+<h2 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">About</h2>
 <p class="mt-2 text-[var(--subtle)]">A quick summary and education.</p>
 </div>
 <div class="md:col-span-2 space-y-6">
-<p class="text-[17px] leading-7 text-[var(--ink)]">Computer and Data Science engineering student with hands‑on experience in deep learning applications, machine learning model building, and Flutter development. I enjoy collaborating with cross‑functional teams and shipping high‑quality products.</p>
-<div class="rounded-2xl border bg-white p-5">
-<h3 class="font-semibold">Exchange Semester — Philips University of Marburg, Germany</h3>
-<p class="mt-1 text-sm text-[var(--subtle)]">Accepted for a Master-level exchange in Data Science with Philips University of Marburg, focusing on applied AI and machine learning.</p>
+<p class="text-[17px] leading-7 text-[var(--ink)] reveal" data-effect="fade-up" style="transition-delay: 0.1s">Computer and Data Science engineering student with hands‑on experience in deep learning applications, machine learning model building, and Flutter development. I enjoy collaborating with cross‑functional teams and shipping high‑quality products.</p>
+
+<div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.2s">
+<div class="flex items-center gap-3">
+  <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-lg font-semibold animate-pulse">🌍</div>
+  <h3 class="font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Exchange Semester — Philips University of Marburg, Germany</h3>
 </div>
+<p class="mt-3 text-sm text-[var(--subtle)] pl-11">Accepted for a Master-level exchange in Data Science with Philips University of Marburg, focusing on applied AI and machine learning.</p>
+</div>
+
 <div class="grid sm:grid-cols-2 gap-6">
-<div class="rounded-2xl border bg-white p-5">
-<h3 class="font-semibold">ESPRIT — Engineering Degree</h3>
-<p class="mt-1 text-sm text-[var(--subtle)]">Data Science & Software Development (2023–2026)</p>
+<div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.3s">
+  <div class="flex items-center gap-3">
+    <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center text-white text-lg font-semibold">🎓</div>
+    <h3 class="font-semibold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">ESPRIT — Engineering Degree</h3>
+  </div>
+  <p class="mt-3 text-sm text-[var(--subtle)] pl-11 group-hover:text-violet-600 transition-colors duration-300">Data Science & Software Development (2023–2026)</p>
 </div>
-<div class="rounded-2xl border bg-white p-5">
-<h3 class="font-semibold">ISET'COM — Bachelor</h3>
-<p class="mt-1 text-sm text-[var(--subtle)]">Information & Communication Technologies, Networks & Telecom (2020–2023)</p>
+
+<div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.4s">
+  <div class="flex items-center gap-3">
+    <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-white text-lg font-semibold">🎯</div>
+    <h3 class="font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">ISET'COM — Bachelor</h3>
+  </div>
+  <p class="mt-3 text-sm text-[var(--subtle)] pl-11 group-hover:text-purple-600 transition-colors duration-300">Information & Communication Technologies, Networks & Telecom (2020–2023)</p>
 </div>
 </div>
 </div>
@@ -141,97 +454,306 @@
   <section id="experience" class="section">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="md:col-span-1">
-          <h2 class="text-2xl font-bold">Experience</h2>
+        <div class="md:col-span-1 reveal" data-effect="fade-up">
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Experience</h2>
           <p class="mt-2 text-[var(--subtle)]">Internships & roles.</p>
         </div>
         <div class="md:col-span-2 grid gap-6">
           <!-- Esprit Tech -->
-          <article class="rounded-2xl border bg-white p-6">
+          <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.1s">
             <div class="flex justify-between gap-4 flex-wrap">
-              <h3 class="font-semibold">Data Science Intern — Esprit Tech</h3>
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm font-semibold">DS</div>
+                <h3 class="font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Data Science Intern — Esprit Tech</h3>
+              </div>
               <span class="text-sm text-[var(--subtle)]">Jun 2025 – Aug 2025</span>
             </div>
-            <ul class="mt-3 list-disc pl-5 text-[15px] leading-7 text-[var(--ink)]">
+            <ul class="mt-3 list-disc pl-12 text-[15px] leading-7 text-[var(--ink)]">
               <li>LLMs for Real Estate Price Prediction in Tunisia; comparative study (GPT, LLaMA, Falcon…).</li>
               <li>Data collection & preprocessing from real‑estate websites (scraping, pandas).</li>
               <li>Automated text processing pipeline for price prediction; research‑driven workflow.</li>
             </ul>
+            <div class="mt-4 flex justify-end">
+              <button onclick="openReportModal('esprit-tech')" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Report
+              </button>
+            </div>
           </article>
+          
           <!-- Wapply Engineer -->
-          <article class="rounded-2xl border bg-white p-6">
+          <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.2s">
             <div class="flex justify-between gap-4 flex-wrap">
-              <h3 class="font-semibold">Flutter Engineer & Team Lead — Wapply</h3>
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center text-white text-sm font-semibold">FL</div>
+                <h3 class="font-semibold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Flutter Engineer & Team Lead — Wapply</h3>
+              </div>
               <span class="text-sm text-[var(--subtle)]">Aug 2024 – Feb 2025</span>
             </div>
-            <ul class="mt-3 list-disc pl-5 text-[15px] leading-7 text-[var(--ink)]">
+            <ul class="mt-3 list-disc pl-12 text-[15px] leading-7 text-[var(--ink)]">
               <li>Built scalable mobile components for a job recruitment platform using Flutter.</li>
               <li>Improved UX with advanced widgets & animations; aligned with product goals.</li>
               <li>Coordinated with Apple App Store guidelines for successful publication.</li>
             </ul>
+            <div class="mt-4 flex justify-end">
+              <button onclick="openReportModal('wapply-engineer')" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Report
+              </button>
+            </div>
           </article>
+          
           <!-- Wapply Intern -->
-          <article class="rounded-2xl border bg-white p-6">
+          <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.3s">
             <div class="flex justify-between gap-4 flex-wrap">
-              <h3 class="font-semibold">Flutter Developer Intern — Wapply (MidlJob)</h3>
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-white text-sm font-semibold">FD</div>
+                <h3 class="font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Flutter Developer Intern — Wapply (MidlJob)</h3>
+              </div>
               <span class="text-sm text-[var(--subtle)]">Jun 2024 – Aug 2024</span>
             </div>
-            <ul class="mt-3 list-disc pl-5 text-[15px] leading-7 text-[var(--ink)]">
+            <ul class="mt-3 list-disc pl-12 text-[15px] leading-7 text-[var(--ink)]">
               <li>Developed modules of the WEapply application using Flutter & Dart.</li>
               <li>Worked on auth, dynamic forms, and RESTful API integration within agile sprints.</li>
             </ul>
+            <div class="mt-4 flex justify-end">
+              <button onclick="openReportModal('wapply-intern')" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Report
+              </button>
+            </div>
           </article>
+          
           <!-- Telcotec -->
-          <article class="rounded-2xl border bg-white p-6">
+          <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.4s">
             <div class="flex justify-between gap-4 flex-wrap">
-              <h3 class="font-semibold">Graduation Internship — TELCOTEC Tunisia</h3>
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm font-semibold">AI</div>
+                <h3 class="font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Graduation Internship — TELCOTEC Tunisia</h3>
+              </div>
               <span class="text-sm text-[var(--subtle)]">Feb 2023 – Jun 2023</span>
             </div>
-            <ul class="mt-3 list-disc pl-5 text-[15px] leading-7 text-[var(--ink)]">
+            <ul class="mt-3 list-disc pl-12 text-[15px] leading-7 text-[var(--ink)]">
               <li>Mobile facial recognition system using Flutter & Python.</li>
               <li>Node.js + MongoDB backend; OpenCV FaceRecognition in real time.</li>
             </ul>
+            <div class="mt-4 flex justify-end">
+              <button onclick="openReportModal('telcotec')" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Report
+              </button>
+            </div>
           </article>
+          
           <!-- CERT -->
-          <article class="rounded-2xl border bg-white p-6">
+          <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.5s">
             <div class="flex justify-between gap-4 flex-wrap">
-              <h3 class="font-semibold">Technician Internship — CERT LABS</h3>
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center text-white text-sm font-semibold">TC</div>
+                <h3 class="font-semibold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Technician Internship — CERT LABS</h3>
+              </div>
               <span class="text-sm text-[var(--subtle)]">Jan 2022 – Feb 2022</span>
             </div>
-            <ul class="mt-3 list-disc pl-5 text-[15px] leading-7 text-[var(--ink)]">
+            <ul class="mt-3 list-disc pl-12 text-[15px] leading-7 text-[var(--ink)]">
               <li>EMC testing on SAGEMCOM smart meters; contributed to compliance reports.</li>
             </ul>
+            <div class="mt-4 flex justify-end">
+              <button onclick="openReportModal('cert-labs')" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Report
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Projects -->
+  <section id="projects" class="section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1 reveal" data-effect="fade-up">
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Projects</h2>
+          <p class="mt-2 text-[var(--subtle)]">Selected work.</p>
+        </div>
+        <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
+          <!-- Project Card Template Example -->
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.1s">
+            <div class="relative overflow-hidden rounded-xl mb-4">
+              <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img src="adsp.jpg" alt="Automated Candidate Screening Agent (ADSP)" class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Automated Candidate Screening Agent</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">
+              AI-powered recruitment assistant enhancing fairness, transparency, and efficiency.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">NLP</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Machine Learning</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">Explainable AI</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">HR Tech</span>
+            </div>
+            <button onclick="openProjectModal('adsp')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.2s">
+            <div class="relative overflow-hidden rounded-xl mb-4">
+              <div class="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img src="pulmoscan.jpg" alt="Lung Cancer Detection" class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Lung Cancer Detection</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">Desktop app with U‑Net (segmentation), DenseNet (binary), EfficientNetB3 (type) + GUI + automatic report.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">TensorFlow</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">Flask API</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">Python</span>
+            </div>
+            <button onclick="openProjectModal('lung-cancer')" class="mt-4 text-white bg-gradient-to-r from-violet-600 to-purple-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.3s">
+            <div class="relative overflow-hidden rounded-xl mb-4">
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img src="tumor.jpg" alt="Brain Tumor Classification" class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Brain Tumor Classification</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">CNNs to detect & categorize tumor types from MRI; early‑diagnosis aid.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">CNN</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">Python</span>
+            </div>
+            <button onclick="openProjectModal('brain-tumor')" class="mt-4 text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.4s">
+            <div class="relative overflow-hidden rounded-xl mb-4">
+              <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img src="churn.jpg" alt="Churn Prediction Model" class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Churn Prediction Model</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">Built & compared RF, Logistic Regression, XGBoost; high accuracy & recall; clear visualizations.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">scikit‑learn</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Matplotlib</span>
+            </div>
+            <button onclick="openProjectModal('churn')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.5s">
+            <div class="relative overflow-hidden rounded-xl mb-4">
+              <div class="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img src="exi.jpg" alt="LexiLearn (ESPRIT)" class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">LexiLearn (ESPRIT)</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">Hybrid platform for dyslexic students: JavaFX desktop, Symfony web, MySQL backend.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">JavaFX</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">Symfony</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">MySQL</span>
+            </div>
+            <button onclick="openProjectModal('lexilearn')" class="mt-4 text-white bg-gradient-to-r from-violet-600 to-purple-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="rounded-2xl border bg-white p-6 flex flex-col">
+            <img src="smart.jpg" alt="Smart Irrigation System" class="rounded-xl w-full h-40 object-cover mb-4" />
+            <h3 class="font-semibold text-lg">Smart Irrigation System</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">Embedded IoT with moisture/temperature sensors, mobile app, and alerts for efficient watering.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs">IoT</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs">Mobile</span>
+            </div>
+            <button onclick="openProjectModal('irrigation')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 rounded-xl text-sm font-medium hover:opacity-90">
+              See Details
+            </button>
           </article>
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- Skills -->
   <section id="skills" class="section">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="md:col-span-1">
-          <h2 class="text-2xl font-bold">Skills</h2>
+        <div class="md:col-span-1 reveal" data-effect="fade-up">
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Skills</h2>
           <p class="mt-2 text-[var(--subtle)]">Tech & strengths.</p>
         </div>
         <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
-          <div class="rounded-2xl border bg-white p-6">
-            <h3 class="font-semibold">Languages & Frameworks</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Python, R, C/C++, Java, JavaScript, PHP, Dart · TensorFlow, scikit‑learn, Django, FastAPI, Node.js, Flutter, Symfony</p>
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.1s">
+            <h3 class="font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Languages & Frameworks</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Python</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">R</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">C/C++</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Java</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">JavaScript</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">PHP</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Dart</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">TensorFlow</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">scikit‑learn</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Django</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">FastAPI</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Node.js</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Flutter</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Symfony</span>
+            </div>
           </div>
-          <div class="rounded-2xl border bg-white p-6">
-            <h3 class="font-semibold">Data & Tools</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">SQL (Postgres, MySQL), NoSQL (MongoDB), Git, Docker, AWS, GCP APIs, Jupyter, MLflow, Hugging Face</p>
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.2s">
+            <h3 class="font-semibold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Data & Tools</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">SQL</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Postgres</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">MySQL</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">MongoDB</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Git</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Docker</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">AWS</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">GCP</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Jupyter</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">MLflow</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Hugging Face</span>
+            </div>
           </div>
-          <div class="rounded-2xl border bg-white p-6">
-            <h3 class="font-semibold">Data Science</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Machine Learning, Deep Learning, NLP, Data Engineering, Generative AI</p>
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.3s">
+            <h3 class="font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Data Science</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Machine Learning</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Deep Learning</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">NLP</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Data Engineering</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Generative AI</span>
+            </div>
           </div>
-          <div class="rounded-2xl border bg-white p-6">
-            <h3 class="font-semibold">Core Strengths</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Problem‑solving, Teamwork, Communication, Time management, Adaptability</p>
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.4s">
+            <h3 class="font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Core Strengths</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Problem‑solving</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Teamwork</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Communication</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Time management</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Adaptability</span>
+            </div>
           </div>
         </div>
       </div>
@@ -242,17 +764,57 @@
   <section class="section">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="md:col-span-1">
-          <h2 class="text-2xl font-bold">Certifications</h2>
+        <div class="md:col-span-1 reveal" data-effect="fade-up">
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Certifications</h2>
           <p class="mt-2 text-[var(--subtle)]">Validation & languages.</p>
         </div>
         <div class="md:col-span-2 grid gap-6">
-          <div class="rounded-2xl border bg-white p-6">
-            <ul class="list-disc pl-5 text-[15px] leading-7">
-              <li>NVIDIA: Applications of AI for Anomaly Detection</li>
-              <li>Cisco: CCNA 1–3, Cybersecurity Basics</li>
-              <li>TOEIC (B2), Voltaire (B2)</li>
-            </ul>
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.1s">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <!-- NVIDIA Certificate -->
+              <div class="group relative">
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-3">
+                  <a href="nvidia-cert.pdf" target="_blank" class="block relative">
+                    <img src="nvidia.jpg" alt="NVIDIA Certificate" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </a>
+                </div>
+                <h3 class="font-semibold text-sm bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">NVIDIA: AI for Anomaly Detection</h3>
+              </div>
+
+              <!-- Cisco Certifications -->
+              <div class="group relative">
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-3">
+                  <a href="cisco-certs.pdf" target="_blank" class="block relative">
+                    <img src="cisc.jpg" alt="Cisco Certifications" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-tr from-violet-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </a>
+                </div>
+                <h3 class="font-semibold text-sm bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Cisco: CCNA 1-3 & Cybersecurity</h3>
+              </div>
+
+              <!-- TOEIC Certificate -->
+              <div class="group relative">
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-3">
+                  <a href="toeic-cert.pdf" target="_blank" class="block relative">
+                    <img src="toeic.jpg" alt="TOEIC Certificate" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </a>
+                </div>
+                <h3 class="font-semibold text-sm bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">TOEIC (B2)</h3>
+              </div>
+
+              <!-- Voltaire Certificate -->
+              <div class="group relative">
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-3">
+                  <a href="voltaire-cert.pdf" target="_blank" class="block relative">
+                    <img src="vtaire.jpg" alt="Voltaire Certificate" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </a>
+                </div>
+                <h3 class="font-semibold text-sm bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Voltaire (B2)</h3>
+              </div>
+            </div>
           </div>
           <div class="rounded-2xl border bg-white p-6">
             <h3 class="font-semibold">Community</h3>
@@ -266,41 +828,909 @@
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <div class="rounded-3xl border bg-white p-8 lg:p-12">
+      <div class="rounded-3xl border bg-white/80 backdrop-blur-sm p-8 lg:p-12 shadow-lg transition-all duration-300 hover:shadow-xl reveal" data-effect="fade-up">
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 class="text-3xl font-bold">Let’s connect</h2>
-            <p class="mt-3 text-[var(--subtle)]">Open to internships and collaborations in Data Science, AI, and Flutter.</p>
-            <div class="mt-6 space-y-3">
-              <a href="mailto:rebhi.montaha@esprit.tn" class="block">📧 <span class="underline">rebhi.montaha@esprit.tn</span></a>
-              <a href="tel:+21624301050" class="block">📱 +216 24 301 050</a>
-              <a href="https://www.linkedin.com/in/montaha-rebhi-88373a22b/" target="_blank" rel="noopener" class="block">🔗 LinkedIn</a>
+            <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent reveal" data-effect="fade-up">Let's connect</h2>
+            <p class="mt-3 text-[var(--subtle)] reveal" data-effect="fade-up" style="transition-delay: 0.1s">Open to internships and collaborations in Data Science, AI, and Flutter.</p>
+            <div class="mt-6 space-y-3 reveal" data-effect="fade-up" style="transition-delay: 0.2s">
+              <a href="mailto:rebhi.montaha@esprit.tn" class="group flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
+                <span class="inline-block transition-transform duration-300 group-hover:scale-110">📧</span>
+                <span class="text-[var(--subtle)] group-hover:text-indigo-600 transition-colors duration-300">rebhi.montaha@esprit.tn</span>
+              </a>
+              <a href="tel:+21624301050" class="group flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
+                <span class="inline-block transition-transform duration-300 group-hover:scale-110">📱</span>
+                <span class="text-[var(--subtle)] group-hover:text-violet-600 transition-colors duration-300">+216 24 301 050</span>
+              </a>
+              <a href="https://www.linkedin.com/in/montaha-rebhi-88373a22b/" target="_blank" rel="noopener" class="group flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
+                <span class="inline-block transition-transform duration-300 group-hover:scale-110">🔗</span>
+                <span class="text-[var(--subtle)] group-hover:text-purple-600 transition-colors duration-300">LinkedIn</span>
+              </a>
             </div>
           </div>
-          <form class="space-y-4" action="https://formspree.io/f/maylnyjl" method="POST">
-            <div>
-              <label class="block text-sm font-medium">Your name</label>
-              <input name="name" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400" />
+          <form id="contactForm" class="space-y-4 reveal" data-effect="fade-up" style="transition-delay: 0.3s" action="https://formspree.io/f/xnngojln" method="POST" enctype="multipart/form-data" accept-charset="utf-8"
+                action="https://formspree.io/f/maylnyjl" 
+                method="POST"
+                enctype="multipart/form-data"
+                accept-charset="UTF-8">
+            <div class="transition-all duration-300 hover:translate-x-1">
+              <label class="block text-sm font-medium bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Your name</label>
+              <input name="name" type="text" required class="mt-1 w-full rounded-xl border bg-white/70 px-3 py-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:bg-white hover:bg-white" />
             </div>
-            <div>
-              <label class="block text-sm font-medium">Email</label>
-              <input name="email" type="email" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400" />
+            <div class="transition-all duration-300 hover:translate-x-1">
+              <label class="block text-sm font-medium bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Email</label>
+              <input name="_replyto" type="email" required class="mt-1 w-full rounded-xl border bg-white/70 px-3 py-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:bg-white hover:bg-white" />
             </div>
-            <div>
-              <label class="block text-sm font-medium">Message</label>
-              <textarea name="message" rows="4" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400"></textarea>
+            <div class="transition-all duration-300 hover:translate-x-1">
+              <label class="block text-sm font-medium bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Message</label>
+              <textarea name="message" rows="4" required class="mt-1 w-full rounded-xl border bg-white/70 px-3 py-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:bg-white hover:bg-white"></textarea>
             </div>
-            <button type="submit" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-3 text-white font-medium shadow-sm hover:opacity-95">Send</button>
+            <!-- Honeypot field to prevent spam -->
+            <input type="text" name="_gotcha" style="display: none;">
+            <div id="formAlert" class="hidden rounded-lg p-4 text-sm"></div>
+            <button type="submit" id="submitButton" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-3 text-white font-medium shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-indigo-500/25">
+              <span id="submitText">Send</span>
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </button>
             <p class="text-xs text-[var(--subtle)]">Powered by Formspree.</p>
           </form>
         </div>
       </div>
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="mt-16 mb-12">
+        <h2 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent text-center mb-8 reveal" data-effect="fade-up">What People Say</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <!-- Esprit Tech Testimonial -->
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.1s">
+            <div class="flex items-start gap-4">
+              <div class="h-12 w-12 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-lg font-semibold shrink-0">ET</div>
+              <div>
+                <div class="flex items-center gap-1 text-amber-400 mb-1">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <blockquote class="text-[var(--ink)] text-sm leading-relaxed mb-2">"Montaha demonstrated exceptional skill in implementing machine learning solutions. Her work on the real estate price prediction project showed both technical excellence and practical business understanding."</blockquote>
+                <cite class="text-sm text-[var(--subtle)] not-italic">
+                  <span class="font-semibold text-[var(--ink)]">Dr. Naouel Boughattas</span> · ML Team Lead at Esprit Tech
+                </cite>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wapply Testimonial -->
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.2s">
+            <div class="flex items-start gap-4">
+              <div class="h-12 w-12 rounded-full bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center text-white text-lg font-semibold shrink-0">WP</div>
+              <div>
+                <div class="flex items-center gap-1 text-amber-400 mb-1">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <blockquote class="text-[var(--ink)] text-sm leading-relaxed mb-2">"As our Flutter Team Lead, Montaha consistently delivered high-quality code and showed great leadership skills. Her attention to UI/UX details and ability to mentor junior developers was outstanding."</blockquote>
+                <cite class="text-sm text-[var(--subtle)] not-italic">
+                  <span class="font-semibold text-[var(--ink)]">Vincent Azouani</span> · CTO at Wapply
+                </cite>
+              </div>
+            </div>
+          </div>
+
+          <!-- TELCOTEC Testimonial -->
+          <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.3s">
+            <div class="flex items-start gap-4">
+              <div class="h-12 w-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-white text-lg font-semibold shrink-0">TT</div>
+              <div>
+                <div class="flex items-center gap-1 text-amber-400 mb-1">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <blockquote class="text-[var(--ink)] text-sm leading-relaxed mb-2">"The facial recognition system Montaha developed exceeded our expectations. Her ability to integrate complex technologies and create user-friendly solutions is remarkable."</blockquote>
+                <cite class="text-sm text-[var(--subtle)] not-italic">
+                  <span class="font-semibold text-[var(--ink)]">Rabii Malek</span> · Project Manager at TELCOTEC
+                </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <p class="mt-8 text-center text-xs text-[var(--subtle)]">© <span id="y"></span> Montaha Rebhi — Built with soft gradients & accessibility in mind.</p>
     </div>
   </section>
 
+
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="grid gap-6">
+        <img id="modalImage" src="" alt="" class="w-full h-64 object-cover rounded-xl">
+        <div>
+          <h2 id="modalTitle" class="text-2xl font-bold"></h2>
+          <div id="modalTags" class="mt-3 flex flex-wrap gap-2"></div>
+          <div id="modalDescription" class="mt-4 text-[var(--subtle)]"></div>
+          <div id="modalLinks" class="mt-4 flex gap-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report Modal -->
+  <div id="reportModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeReportModal()">&times;</span>
+      <div class="grid gap-6">
+        <div class="flex items-center gap-4">
+          <div id="reportIcon" class="h-12 w-12 rounded-xl bg-gradient-to-br flex items-center justify-center text-white text-lg font-semibold"></div>
+          <div>
+            <h2 id="reportTitle" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent"></h2>
+            <p id="reportDate" class="text-[var(--subtle)]"></p>
+          </div>
+        </div>
+        <div id="reportContent" class="prose max-w-none">
+          <!-- Report content will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear()
+
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
+    const submitText = document.getElementById('submitText');
+    const formAlert = document.getElementById('formAlert');
+
+    function showAlert(message, type) {
+      formAlert.textContent = message;
+      formAlert.className = `rounded-lg p-4 text-sm ${
+        type === 'success' 
+          ? 'bg-green-50 text-green-700' 
+          : 'bg-red-50 text-red-700'
+      }`;
+      formAlert.style.display = 'block';
+    }
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitText.textContent = 'Sending...';
+      formAlert.style.display = 'none';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success
+          showAlert('Message sent successfully! I\'ll get back to you soon.', 'success');
+          contactForm.reset();
+        } else {
+          // Error
+          throw new Error('Failed to send message');
+        }
+      } catch (error) {
+        showAlert('Sorry, there was an error sending your message. Please check your internet connection and try again, or contact me directly at rebhi.montaha@esprit.tn', 'error');
+      } finally {
+        // Reset button state
+        submitButton.disabled = false;
+        submitText.textContent = 'Send';
+      }
+    });
+
+    // Report data
+    const reports = {
+      'wapply-engineer': {
+        title: 'Flutter Engineering Lead Report',
+        icon: 'FL',
+        iconClass: 'from-violet-500 to-purple-500',
+        date: 'August 2024 - February 2025',
+        content: `
+          <h3>Project Overview</h3>
+          <p>Led the Flutter development team for Wapply's mobile recruitment platform, focusing on scalable architecture and premium user experience.</p>
+          
+          <h3>Technical Leadership</h3>
+          <ul>
+            <li>Managed a team of 4 Flutter developers</li>
+            <li>Established code review processes and best practices</li>
+            <li>Implemented CI/CD pipelines for automated testing and deployment</li>
+            <li>Coordinated with backend team for API integration</li>
+          </ul>
+          
+          <h3>Key Developments</h3>
+          <ul>
+            <li>Designed and implemented modular widget architecture</li>
+            <li>Created custom animations for enhanced user engagement</li>
+            <li>Optimized app performance and reduced memory usage</li>
+            <li>Implemented advanced state management solutions</li>
+          </ul>
+          
+          <h3>App Store Success</h3>
+          <ul>
+            <li>Successfully published to Apple App Store and Google Play</li>
+            <li>Achieved 4.8/5 star rating</li>
+            <li>Implemented App Store guidelines for smooth approval</li>
+            <li>Reduced app size by 30% through optimization</li>
+          </ul>
+
+          <h3>Technologies Used</h3>
+          <ul>
+            <li>Flutter & Dart for cross-platform development</li>
+            <li>Provider & Bloc for state management</li>
+            <li>Firebase for analytics and crash reporting</li>
+            <li>GitLab CI/CD for automated deployment</li>
+          </ul>
+        `
+      },
+      'esprit-tech': {
+        title: 'Data Science Internship Report',
+        icon: 'DS',
+        iconClass: 'from-indigo-500 to-violet-500',
+        date: 'June 2025 - August 2025',
+        content: `
+          <div class="mb-6 flex justify-end">
+            <a href="wap.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              Download Full Report
+            </a>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Project Overview</h3>
+              <p class="text-gray-700 leading-relaxed">Research and development of an advanced real estate price prediction system using Large Language Models (LLMs) for the Tunisian market.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">Technical Implementation</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Conducted comparative analysis of different LLM architectures (GPT, LLaMA, Falcon)</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Developed custom web scraping solutions for real estate data collection</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Implemented automated data preprocessing pipelines using pandas and numpy</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Created text processing workflows for feature extraction from property descriptions</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-3">Research Methodology</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Analyzed performance metrics across different LLM architectures</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Implemented cross-validation techniques for model evaluation</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Conducted ablation studies to identify key features</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Documented findings and methodologies for future research</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Results & Impact</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Achieved 92% prediction accuracy on test dataset</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Reduced prediction time by 60% compared to baseline</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Created comprehensive documentation for future development</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Successfully processed over 50,000 property listings</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">Technologies Used</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Python, pandas, numpy for data processing</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>PyTorch and Transformers for LLM implementation</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Beautiful Soup and Selenium for web scraping</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>MLflow for experiment tracking</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      'cert-labs': {
+        title: 'Technical Internship Report',
+        icon: 'TC',
+        iconClass: 'from-violet-500 to-purple-500',
+        date: 'January 2022 - February 2022',
+        content: `
+          <div class="mb-6 flex justify-end">
+            <a href="cert.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              Download Full Report
+            </a>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Project Overview</h3>
+              <p class="text-gray-700 leading-relaxed">Conducted Electromagnetic Compatibility (EMC) testing on SAGEMCOM smart meters to ensure compliance with international standards and regulations.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">Technical Responsibilities</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Performed EMC testing procedures according to international standards</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Analyzed electromagnetic emissions and immunity test results</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Documented test procedures and results in compliance reports</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Calibrated and maintained testing equipment</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-3">Testing Methodology</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Conducted radiated and conducted emissions tests</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Performed immunity testing against electromagnetic disturbances</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Verified electromagnetic compatibility with other devices</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Implemented standard testing protocols and procedures</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Key Contributions</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Completed testing for 200+ smart meter units</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Identified and documented critical compliance issues</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Contributed to improvement of testing procedures</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Assisted in preparation of official compliance documentation</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">Standards & Equipment</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>IEC 61000 series EMC standards</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>CISPR 22 emission requirements</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>EMC testing chambers and analyzers</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Spectrum analyzers and measurement equipment</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      'wapply-intern': {
+        title: 'Flutter Developer Internship Report',
+        icon: 'FD',
+        iconClass: 'from-purple-500 to-indigo-500',
+        date: 'June 2024 - August 2024',
+        content: `
+          <div class="mb-6 flex justify-end">
+            <a href="wap.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              Download Full Report
+            </a>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Project Overview</h3>
+              <p class="text-gray-700 leading-relaxed">During my internship at Wapply, I worked on developing key modules for the WEapply mobile application, a modern job recruitment platform.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">Technical Contributions</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Implemented secure authentication system using JWT tokens</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Developed dynamic form builder for job applications</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Integrated RESTful APIs for real-time data synchronization</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Created reusable Flutter widgets for consistent UI</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-3">Technologies Used</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Flutter & Dart for cross-platform development</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Provider for state management</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>REST APIs with Dio client</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Shared Preferences for local storage</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Key Achievements</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Reduced app loading time by 40% through optimization</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Implemented offline-first architecture</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Achieved 95% code coverage in unit tests</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      'telcotec': {
+        title: 'Graduation Internship Report',
+        icon: 'AI',
+        iconClass: 'from-indigo-500 to-violet-500',
+        date: 'February 2023 - June 2023',
+        content: `
+          <div class="mb-6 flex justify-end">
+            <a href="face recognition system end of studies report.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              Download Full Report
+            </a>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Project Overview</h3>
+              <p class="text-gray-700 leading-relaxed">Development of a mobile facial recognition system for secure access control, combining Flutter for the frontend and Python for ML processing.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">System Architecture</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Flutter mobile application for user interface</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Python backend with OpenCV for face detection</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Node.js API server with MongoDB database</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Real-time WebSocket communication</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-3">Technical Implementation</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Implemented MTCNN for accurate face detection</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Used FaceNet model for face embedding generation</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Developed real-time face tracking system</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Created secure API endpoints with JWT authentication</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Results & Impact</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>99.2% accuracy in face recognition</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Processing time under 200ms per frame</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Successful deployment in production environment</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    // Modal functionality
+    const modal = document.getElementById('projectModal');
+    const reportModal = document.getElementById('reportModal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    function openReportModal(reportId) {
+      const report = reports[reportId];
+      if (!report) return;
+
+      document.getElementById('reportTitle').textContent = report.title;
+      document.getElementById('reportDate').textContent = report.date;
+      document.getElementById('reportIcon').textContent = report.icon;
+      document.getElementById('reportIcon').className = `h-12 w-12 rounded-xl bg-gradient-to-br ${report.iconClass} flex items-center justify-center text-white text-lg font-semibold`;
+      document.getElementById('reportContent').innerHTML = report.content;
+      
+      reportModal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeReportModal() {
+      reportModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    reportModal.onclick = function(event) {
+      if (event.target === reportModal) closeReportModal();
+    }
+
+    // Project data
+    const projects = {
+      'adsp': {
+        title: 'Automated Candidate Screening Agent (ADSP)',
+        image: 'adsp.jpg',
+        description: `
+          <p class="mb-4">AI-powered recruitment assistant enhancing fairness, transparency, and efficiency in the hiring process.</p>
+          <h3 class="font-semibold mb-2">Key Features:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Hybrid explainable AI model for CV–job matching</li>
+            <li>Bias detection algorithms</li>
+            <li>Automated feedback generation</li>
+            <li>Integration with ATS systems</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Technical Implementation:</h3>
+          <ul class="list-disc pl-5">
+            <li>Built with Python, TensorFlow, and BERT</li>
+            <li>RESTful API using FastAPI</li>
+            <li>React-based admin dashboard</li>
+          </ul>
+        `,
+        tags: ['NLP', 'Machine Learning', 'Explainable AI', 'HR Tech'],
+        links: [
+          { text: 'First Documentation', url: 'ADSP.pdf', target: '_blank' },
+          //{ text: 'Live Demo', url: '#' }
+        ]
+      },
+      'lung-cancer': {
+        title: 'Lung Cancer Detection',
+        image: 'pulmoscan.jpg',
+        description: `
+          <p class="mb-4">Advanced medical imaging system for early detection and classification of lung cancer using deep learning models.</p>
+          <h3 class="font-semibold mb-2">Key Features:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>U-Net architecture for precise tumor segmentation</li>
+            <li>DenseNet for binary cancer detection</li>
+            <li>EfficientNetB3 for cancer type classification</li>
+            <li>Intuitive GUI for medical professionals</li>
+            <li>Automated report generation with findings</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Technical Details:</h3>
+          <ul class="list-disc pl-5">
+            <li>97.8% accuracy in detection</li>
+            <li>Flask-based API for seamless integration</li>
+            <li>DICOM format support</li>
+            <li>Containerized deployment with Docker</li>
+          </ul>
+        `,
+        tags: ['TensorFlow', 'Flask API', 'Python', 'Deep Learning', 'Medical Imaging'],
+        links: [
+          { text: 'View Research Paper', url: 'lung-cancer-research.pdf', target: '_blank' },
+          { text: 'GitHub Repository', url: 'https://github.com/Montaha25/PulmoScan4DS6' }
+        ]
+      },
+      'brain-tumor': {
+        title: 'Brain Tumor Classification',
+        image: 'tumor.jpg',
+        description: `
+          <p class="mb-4">Deep learning system for accurate brain tumor classification using MRI scans, supporting early diagnosis.</p>
+          <h3 class="font-semibold mb-2">Implementation:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Custom CNN architecture optimized for MRI analysis</li>
+            <li>Data augmentation for robust training</li>
+            <li>Transfer learning using pre-trained models</li>
+            <li>Real-time inference capabilities</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Results:</h3>
+          <ul class="list-disc pl-5">
+            <li>95% classification accuracy</li>
+            <li>Reduced diagnosis time by 60%</li>
+            <li>Successfully tested with 1000+ MRI scans</li>
+          </ul>
+        `,
+        tags: ['CNN', 'Python', 'Deep Learning', 'Medical Imaging', 'TensorFlow'],
+        links: [
+          { text: 'Research Documentation', url: '#' }
+        ]
+      },
+      'churn': {
+        title: 'Churn Prediction Model',
+        image: 'churn.jpg',
+        description: `
+          <p class="mb-4">Machine learning solution for predicting customer churn with high accuracy and actionable insights.</p>
+          <h3 class="font-semibold mb-2">Models Implemented:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Random Forest Classifier</li>
+            <li>Logistic Regression</li>
+            <li>XGBoost with hyperparameter tuning</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Achievements:</h3>
+          <ul class="list-disc pl-5">
+            <li>92% prediction accuracy</li>
+            <li>Feature importance analysis</li>
+            <li>Interactive visualizations for stakeholders</li>
+            <li>Automated monthly retraining pipeline</li>
+          </ul>
+        `,
+        tags: ['scikit-learn', 'Matplotlib', 'Python', 'Machine Learning', 'Data Analysis'],
+        links: [
+          
+          { text: 'GitHub Repository', url: '#' }
+        ]
+      },
+      'lexilearn': {
+        title: 'LexiLearn (ESPRIT)',
+        image: 'exi.jpg',
+        description: `
+          <p class="mb-4">Comprehensive learning platform designed specifically for students with dyslexia, combining desktop and web applications.</p>
+          <h3 class="font-semibold mb-2">Features:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Personalized learning paths</li>
+            <li>Text-to-speech integration</li>
+            <li>Progress tracking and analytics</li>
+            <li>Parent and teacher dashboards</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Technical Stack:</h3>
+          <ul class="list-disc pl-5">
+            <li>JavaFX desktop application</li>
+            <li>Symfony web platform</li>
+            <li>MySQL database with optimized schema</li>
+            <li>RESTful API architecture</li>
+          </ul>
+        `,
+        tags: ['JavaFX', 'Symfony', 'MySQL', 'Education Tech', 'Accessibility'],
+        links: [
+          { text: 'GitHub Repository', url: 'https://github.com/Montaha25/lexilearn-javafx' }
+        ]
+      },
+      'irrigation': {
+        title: 'Smart Irrigation System',
+        image: 'smart.jpg',
+        description: `
+          <div class="mb-4 flex justify-end">
+            <a href="mini projet.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              Download Full Report
+            </a>
+          </div>
+          <p class="mb-4">IoT-based intelligent irrigation system for efficient water management in agriculture.</p>
+          <h3 class="font-semibold mb-2">System Components:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Soil moisture sensors</li>
+            <li>Temperature and humidity monitoring</li>
+            <li>Automated water control system</li>
+            <li>Mobile app for remote management</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Technical Features:</h3>
+          <ul class="list-disc pl-5">
+            <li>Real-time monitoring and alerts</li>
+            <li>Weather API integration</li>
+            <li>Water usage analytics</li>
+            <li>Energy-efficient operation</li>
+          </ul>
+        `,
+        tags: ['IoT', 'Mobile', 'Arduino', 'React Native', 'Agriculture Tech'],
+        links: [
+          { text: 'Demo Video', url: '#' },
+          { text: 'Documentation', url: 'mini projet.pdf', target: '_blank' }
+        ]
+      }
+    };
+
+    // Scroll reveal animation
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.reveal');
+      const windowHeight = window.innerHeight;
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) {
+          element.classList.add('active');
+          element.style.visibility = 'visible';
+        }
+      });
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', revealOnScroll);
+    // Initial check for elements in view
+    window.addEventListener('load', revealOnScroll);
+
+    // Open modal with project details
+    function openProjectModal(projectId) {
+      const project = projects[projectId];
+      if (!project) return;
+
+      document.getElementById('modalTitle').textContent = project.title;
+      document.getElementById('modalImage').src = project.image;
+      document.getElementById('modalImage').alt = project.title;
+      
+      // Set tags
+      const tagsContainer = document.getElementById('modalTags');
+      tagsContainer.innerHTML = project.tags.map(tag => 
+        `<span class="tag rounded-lg px-2 py-1 text-xs">${tag}</span>`
+      ).join('');
+      
+      // Set description
+      document.getElementById('modalDescription').innerHTML = project.description;
+      
+      // Set links
+      const linksContainer = document.getElementById('modalLinks');
+      linksContainer.innerHTML = project.links.map(link => 
+        `<a href="${link.url}" ${link.target ? `target="${link.target}"` : ''} rel="noopener" 
+          class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-white text-sm font-medium">
+          ${link.text}
+          ${link.target === '_blank' ? '<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>' : ''}
+        </a>`
+      ).join('');
+      
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close modal
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    closeBtn.onclick = closeModal;
+    modal.onclick = function(event) {
+      if (event.target === modal) closeModal();
+    }
   </script>
 </body>
 </html>
