@@ -459,6 +459,44 @@
           <p class="mt-2 text-[var(--subtle)]">Internships & roles.</p>
         </div>
         <div class="md:col-span-2 grid gap-6">
+          <!-- Siemens Energy -->
+          <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.05s">
+            <div class="flex justify-between gap-4 flex-wrap">
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-white text-sm font-semibold">SE</div>
+                <h3 class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AI and Data Science Engineer Intern — Siemens Energy</h3>
+              </div>
+              <span class="text-sm text-[var(--subtle)]">Jun 2026 – Present</span>
+            </div>
+            <ul class="mt-3 list-disc pl-12 text-[15px] leading-7 text-[var(--ink)]">
+              <li>AI and Data Science Engineering internship at Siemens Energy.</li>
+            </ul>
+          </article>
+
+          <!-- SUBUL / Smartovate -->
+          <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.08s">
+            <div class="flex justify-between gap-4 flex-wrap">
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center text-white text-sm font-semibold">SU</div>
+                <h3 class="font-semibold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">AI Engineer Intern — SUBUL (Smartovate, London)</h3>
+              </div>
+              <span class="text-sm text-[var(--subtle)]">Feb 2026 – Jun 2026</span>
+            </div>
+            <ul class="mt-3 list-disc pl-12 text-[15px] leading-7 text-[var(--ink)]">
+              <li>Built a multi-agent AI career assistant (CV, Job, and ATS agents) orchestrated with LangGraph for the SUBUL learning platform.</li>
+              <li>Fine-tuned a bi-encoder matching model (MiniLM-based) for CV-to-job compatibility scoring, reaching R² = 0.989.</li>
+              <li>Implemented multi-source job scraping, explainable ATS scoring, and a bilingual conversational assistant with FastAPI, Next.js, and Azure.</li>
+            </ul>
+            <div class="mt-4 flex justify-end">
+              <button onclick="openReportModal('subul-smartovate')" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Report
+              </button>
+            </div>
+          </article>
+
           <!-- Esprit Tech -->
           <article class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.1s">
             <div class="flex justify-between gap-4 flex-wrap">
@@ -595,13 +633,14 @@
             </div>
             <h3 class="font-semibold text-lg bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Automated Candidate Screening Agent</h3>
             <p class="mt-2 text-sm text-[var(--subtle)]">
-              AI-powered recruitment assistant enhancing fairness, transparency, and efficiency.
+              End-to-end AI recruitment platform with automated CV evaluation, a multi-agent LLM chatbot system, and RAG-powered, explainable candidate ranking.
             </p>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">NLP</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Machine Learning</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">Explainable AI</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">HR Tech</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">Llama 3</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Explainable AI</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">Chatbot</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">Hugging Face</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Retrieval Augmented Generation</span>
             </div>
             <button onclick="openProjectModal('adsp')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5">
               See Details
@@ -674,15 +713,77 @@
             </button>
           </article>
 
-          <article class="rounded-2xl border bg-white p-6 flex flex-col">
-            <img src="smart.jpg" alt="Smart Irrigation System" class="rounded-xl w-full h-40 object-cover mb-4" />
-            <h3 class="font-semibold text-lg">Smart Irrigation System</h3>
-            <p class="mt-2 text-sm text-[var(--subtle)]">Embedded IoT with moisture/temperature sensors, mobile app, and alerts for efficient watering.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="tag rounded-lg px-2 py-1 text-xs">IoT</span>
-              <span class="tag rounded-lg px-2 py-1 text-xs">Mobile</span>
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.6s">
+            <div class="relative overflow-hidden rounded-xl mb-4">
+              <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img src="estate.jpg" alt="Tunisian Real Estate Price Prediction Using LLMs" class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
-            <button onclick="openProjectModal('irrigation')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 rounded-xl text-sm font-medium hover:opacity-90">
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Real Estate Price Prediction Using LLMs</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">Scraped and consolidated 1,400 Tunisian real-estate listings; engineered structured features and applied LLM-based description analysis for price prediction.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">Web Scraping</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">LLM Prompt Engineering</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">MLOps</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">Python</span>
+            </div>
+            <button onclick="openProjectModal('real-estate')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.7s">
+            <div class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center">
+              <span class="absolute top-2 left-2 rounded-lg bg-white/90 px-2 py-1 text-[10px] font-semibold text-emerald-700 shadow-sm">Upwork Project</span>
+              <span class="text-white font-semibold text-sm text-center px-6">AutoExpDesign: Self-Verifying LLM Experiment Planner</span>
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Automated Scientific Experiment Design (AutoExpDesign)</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">LLM-based framework that turns research questions into structured, machine-verifiable experiment plans using a two-tier verifier and a self-revision loop.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-emerald-50 text-emerald-700 border-emerald-100 hover:bg-emerald-100 transition-colors">Upwork Project</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">LLMs</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Structured Generation</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">Self-Verification</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">Research Automation</span>
+            </div>
+            <button onclick="openProjectModal('autoexpdesign')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.8s">
+            <div class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-violet-600 to-purple-600 flex items-center justify-center">
+              <span class="absolute top-2 left-2 rounded-lg bg-white/90 px-2 py-1 text-[10px] font-semibold text-emerald-700 shadow-sm">Upwork Project</span>
+              <span class="text-white font-semibold text-sm text-center px-6">Fetch &amp; Extract Prototype</span>
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Sunport Research Platform</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">SSRF-safe web fetching and deterministic text extraction service powering stable, citable evidence offsets for a research agent platform.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-emerald-50 text-emerald-700 border-emerald-100 hover:bg-emerald-100 transition-colors">Upwork Project</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">FastAPI</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">Playwright</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">SSRF Protection</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Python</span>
+            </div>
+            <button onclick="openProjectModal('sunport-research')" class="mt-4 text-white bg-gradient-to-r from-violet-600 to-purple-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25 hover:-translate-y-0.5">
+              See Details
+            </button>
+          </article>
+
+          <article class="group rounded-2xl border bg-white/80 backdrop-blur-sm p-6 flex flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.9s">
+            <div class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center">
+              <span class="absolute top-2 left-2 rounded-lg bg-white/90 px-2 py-1 text-[10px] font-semibold text-blue-700 shadow-sm">London Startup Project</span>
+              <span class="text-white font-semibold text-sm text-center px-6">SUBUL AI Career Assistant</span>
+            </div>
+            <h3 class="font-semibold text-lg bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">SUBUL AI Career Assistant</h3>
+            <p class="mt-2 text-sm text-[var(--subtle)]">Multi-agent AI career platform for Smartovate (London): CV optimization, multi-source job matching, and explainable ATS scoring, orchestrated with LangGraph.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-blue-50 text-blue-700 border-blue-100 hover:bg-blue-100 transition-colors">London Startup Project</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100 transition-colors">LangGraph</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-violet-50 text-violet-600 border-violet-100 hover:bg-violet-100 transition-colors">Fine-tuned Embeddings</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100 transition-colors">FastAPI</span>
+              <span class="tag rounded-lg px-2 py-1 text-xs bg-blue-50 text-blue-700 border-blue-100 hover:bg-blue-100 transition-colors">Next.js</span>
+            </div>
+            <button onclick="openProjectModal('subul-career-assistant')" class="mt-4 text-white bg-gradient-to-r from-indigo-600 to-blue-600 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5">
               See Details
             </button>
           </article>
@@ -717,6 +818,9 @@
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Node.js</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Flutter</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Symfony</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Next.js</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">LangGraph</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">XGBoost / LightGBM</span>
             </div>
           </div>
           <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.2s">
@@ -730,9 +834,12 @@
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Docker</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">AWS</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">GCP</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Azure</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Jupyter</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">MLflow</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Hugging Face</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Web Scraping</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Playwright</span>
             </div>
           </div>
           <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.3s">
@@ -743,6 +850,10 @@
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">NLP</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Data Engineering</span>
               <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Generative AI</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">LLM Prompt Engineering</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Retrieval Augmented Generation</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">Explainable AI</span>
+              <span class="tag px-2 py-1 rounded-lg text-sm bg-white hover:scale-110 transition-all duration-300">MLOps</span>
             </div>
           </div>
           <div class="rounded-2xl border bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal" data-effect="fade-up" style="transition-delay: 0.4s">
@@ -844,6 +955,17 @@
                 <h3 class="font-semibold text-sm bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Post-training of LLMs Certificate</h3>
               </div>
 
+              <!-- DataCamp Certificate -->
+              <div class="group relative">
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-3">
+                  <a href="DataCamp.jpg" target="_blank" class="block relative">
+                    <img src="DataCamp.jpg" alt="DataCamp Certificate" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </a>
+                </div>
+                <h3 class="font-semibold text-sm bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">DataCamp: AI Engineer for Data Scientists Associate</h3>
+              </div>
+
               <!-- Cisco Certifications -->
               <div class="group relative">
                 <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-3">
@@ -900,9 +1022,13 @@
                 <span class="inline-block transition-transform duration-300 group-hover:scale-110">📧</span>
                 <span class="text-[var(--subtle)] group-hover:text-indigo-600 transition-colors duration-300">rebhi.montaha@esprit.tn</span>
               </a>
-              <a href="tel:+21624301050" class="group flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
+              <a href="mailto:manarebhi375@gmail.com" class="group flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
+                <span class="inline-block transition-transform duration-300 group-hover:scale-110">📧</span>
+                <span class="text-[var(--subtle)] group-hover:text-indigo-600 transition-colors duration-300">manarebhi375@gmail.com</span>
+              </a>
+              <a href="tel:+4915510945477" class="group flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
                 <span class="inline-block transition-transform duration-300 group-hover:scale-110">📱</span>
-                <span class="text-[var(--subtle)] group-hover:text-violet-600 transition-colors duration-300">+216 24 301 050</span>
+                <span class="text-[var(--subtle)] group-hover:text-violet-600 transition-colors duration-300">+49 155 10945477</span>
               </a>
               <a href="https://www.linkedin.com/in/montaha-rebhi-88373a22b/" target="_blank" rel="noopener" class="group flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
                 <span class="inline-block transition-transform duration-300 group-hover:scale-110">🔗</span>
@@ -1103,6 +1229,95 @@
 
     // Report data
     const reports = {
+      'subul-smartovate': {
+        title: 'SUBUL AI Career Assistant Report',
+        icon: 'SU',
+        iconClass: 'from-indigo-500 to-blue-500',
+        date: 'February 2026 - June 2026',
+        content: `
+          <div class="mb-6 flex justify-end">
+            <a href="subul%20platform.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              Download Full Report
+            </a>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-3">Project Overview</h3>
+              <p class="text-gray-700 leading-relaxed">Internship at Smartovate, a London-based EdTech/HRTech startup, building an AI-powered career assistant for the SUBUL learning platform, bridging the gap between skill development and employment through intelligent resume analysis, job matching, and career guidance.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">Technical Implementation</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Designed a multi-agent architecture (Supervisor, CV, Job, and ATS agents) orchestrated with LangGraph</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Built a CV Agent with deterministic ATS scoring, LLM-based rewriting, and an anti-hallucination guard</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Built a Job Agent aggregating listings from 14 job-board sources with semantic matching, skill-gap analysis, and a learning roadmap</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Fine-tuned a bi-encoder regression model on top of MiniLM-L6-v2 for CV-to-job compatibility scoring</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Implemented a job-specific ATS Agent with dimension-by-dimension compatibility breakdown and a bilingual conversational assistant</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-3">Results</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>R² = 0.9890, MAE = 1.82 points on a held-out 22,500-pair test set</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Outperformed a TF-IDF baseline with a 47.6-point score separation vs 14.3, and NDCG@5 of 0.9981 vs 0.8498</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Delivered across 5 Scrum sprints following a hybrid Scrum/CRISP-ML(Q) methodology</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-3">Technologies Used</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Python, FastAPI, LangGraph, Azure OpenAI</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Next.js & TypeScript frontend</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>Azure Cosmos DB & Azure PostgreSQL</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-violet-500 mr-2">•</span>
+                  <span>sentence-transformers, PyTorch, scikit-learn</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
       'wapply-engineer': {
         title: 'Flutter Engineering Lead Report',
         icon: 'FL',
@@ -1574,24 +1789,24 @@
         title: 'Automated Candidate Screening Agent (ADSP)',
         image: 'adsp.jpg',
         description: `
-          <p class="mb-4">AI-powered recruitment assistant enhancing fairness, transparency, and efficiency in the hiring process.</p>
+          <p class="mb-4">Designed and developed an end-to-end AI-driven recruitment platform enabling candidates to upload CVs for automated evaluation, real-time LaTeX-based editing, and personalized feedback. The system identifies skill gaps against job descriptions and provides targeted training, practice questions, and interview preparation.</p>
           <h3 class="font-semibold mb-2">Key Features:</h3>
           <ul class="list-disc pl-5 mb-4">
-            <li>Hybrid explainable AI model for CV–job matching</li>
-            <li>Bias detection algorithms</li>
-            <li>Automated feedback generation</li>
-            <li>Integration with ATS systems</li>
+            <li>Automated CV evaluation with real-time LaTeX-based editing</li>
+            <li>Skill-gap analysis against job descriptions</li>
+            <li>Personalized training, practice questions, and interview preparation</li>
+            <li>Multi-agent architecture with three LLM-based chatbots (candidate, recruiter, coordinator) to match, filter, and rank profiles</li>
           </ul>
           <h3 class="font-semibold mb-2">Technical Implementation:</h3>
           <ul class="list-disc pl-5">
-            <li>Built with Python, TensorFlow, and BERT</li>
-            <li>RESTful API using FastAPI</li>
-            <li>React-based admin dashboard</li>
+            <li>Llama 3 via Hugging Face for the LLM-based chatbot agents</li>
+            <li>Embeddings and RAG pipelines for candidate–job matching</li>
+            <li>XAI methods (SHAP, LIME) for transparent, interpretable hiring decisions</li>
           </ul>
         `,
-        tags: ['NLP', 'Machine Learning', 'Explainable AI', 'HR Tech'],
+        tags: ['Llama 3', 'Explainable AI', 'Chatbot', 'Hugging Face', 'Retrieval Augmented Generation'],
         links: [
-          { text: 'First Documentation', url: 'ADSP.pdf', target: '_blank' },
+          { text: 'View Full Report', url: 'ADSP%20report.pdf', target: '_blank' },
           //{ text: 'Live Demo', url: '#' }
         ]
       },
@@ -1696,38 +1911,108 @@
           { text: 'GitHub Repository', url: 'https://github.com/Montaha25/lexilearn-javafx' }
         ]
       },
-      'irrigation': {
-        title: 'Smart Irrigation System',
-        image: 'smart.jpg',
+      'real-estate': {
+        title: 'Real Estate Price Prediction Using LLMs',
+        image: 'estate.jpg',
         description: `
-          <div class="mb-4 flex justify-end">
-            <a href="mini projet.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-violet-600 hover:text-violet-700 transition-colors">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              </svg>
-              Download Full Report
-            </a>
-          </div>
-          <p class="mb-4">IoT-based intelligent irrigation system for efficient water management in agriculture.</p>
-          <h3 class="font-semibold mb-2">System Components:</h3>
+          <p class="mb-4">Scraped and consolidated 1,400 real-estate listings from the local Tunisian market; engineered structured features and applied LLM-based description analysis to predict property prices.</p>
+          <h3 class="font-semibold mb-2">Key Features:</h3>
           <ul class="list-disc pl-5 mb-4">
-            <li>Soil moisture sensors</li>
-            <li>Temperature and humidity monitoring</li>
-            <li>Automated water control system</li>
-            <li>Mobile app for remote management</li>
+            <li>Multi-source scraping framework (Tecnocasa, Mubawab, Menzili) plus an AI-powered universal scraper</li>
+            <li>GPT-4o-based extraction of 27 structured features from unstructured descriptions</li>
+            <li>Automated address normalization and missing-value enrichment</li>
+            <li>Feature engineering: size metrics, location flags, luxury scoring, AI-derived property tiers</li>
           </ul>
-          <h3 class="font-semibold mb-2">Technical Features:</h3>
+          <h3 class="font-semibold mb-2">Results:</h3>
           <ul class="list-disc pl-5">
-            <li>Real-time monitoring and alerts</li>
-            <li>Weather API integration</li>
-            <li>Water usage analytics</li>
-            <li>Energy-efficient operation</li>
+            <li>10% improvement over the baseline model after integrating LLM-derived features</li>
+            <li>Evaluated with cross-validation across multiple regression models (XGBoost, LightGBM, Random Forest, etc.)</li>
+            <li>Tuned XGBoost model achieved R² of 0.86 and MAPE under 17%</li>
+            <li>Deployed via a FastAPI web app with automated MLOps retraining pipeline</li>
           </ul>
         `,
-        tags: ['IoT', 'Mobile', 'Arduino', 'React Native', 'Agriculture Tech'],
+        tags: ['Web Scraping', 'LLM Prompt Engineering', 'MLOps', 'Python', 'Automated Deployment Pipeline'],
         links: [
-          { text: 'Demo Video', url: '#' },
-          { text: 'Documentation', url: 'mini projet.pdf', target: '_blank' }
+          { text: 'View Full Report', url: 'real%20estate%20price%20prediction%20Using%20LLMs.pdf', target: '_blank' },
+          { text: 'GitHub Repository', url: 'https://github.com/Montaha25/House_price_prediction' }
+        ]
+      },
+      'autoexpdesign': {
+        title: 'Automated Scientific Experiment Design (AutoExpDesign)',
+        image: null,
+        description: `
+          <p class="mb-4">AutoExpDesign is a self-verifying framework that uses large language models to turn a research question into a structured, machine-checkable experiment plan — covering hypotheses, datasets, baselines, protocol, metrics, statistical tests, resources, and reproducibility as a typed 11-field JSON artifact.</p>
+          <h3 class="font-semibold mb-2">Key Features:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Structured JSON schema (11 required fields) enabling automatic, machine-readable verification of every plan</li>
+            <li>Two-tier verifier: deterministic hard gates (schema, consistency, feasibility) plus an LLM critic for subtler methodological issues</li>
+            <li>Convergence-aware revision loop that iterates until hard-gate issues are resolved or a max-iteration cap is reached</li>
+            <li>Reconstruction benchmark of 50 gold plans from landmark papers (ResNet, BERT, GPT-2, AlphaFold, etc.) for reference-based evaluation</li>
+            <li>An automated placeholder/boilerplate detector added to catch schema-fill contamination that could otherwise inflate pass rates</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Results:</h3>
+          <ul class="list-disc pl-5">
+            <li>Pilot study (180 runs, 9 configurations): full pipeline reaches 100% verified pass vs. 85% for single-shot generation without verification</li>
+            <li>Local open-weight run on all 80 released prompts (Qwen2.5-3B via Ollama, no paid API): 100% structural pass, 91% verified pass</li>
+            <li>Reconstruction similarity roughly 4x the random baseline on the GPT-4o pilot slice (p &lt; 0.001)</li>
+            <li>Five generated plans were run as real experiments end-to-end, including cases where the underlying hypothesis failed empirically</li>
+          </ul>
+        `,
+        tags: ['Upwork Project', 'LLMs', 'Structured Generation', 'Self-Verification', 'Research Automation', 'Python'],
+        links: [
+          { text: 'View Full Paper', url: 'Automated_Scientific_Experiment_Design_Using_Large_Language_Models__A_Self_Verifying_Framework_with_Structured_Plan_Generation.pdf', target: '_blank' }
+        ]
+      },
+      'sunport-research': {
+        title: 'Sunport Research Platform',
+        image: null,
+        description: `
+          <p class="mb-4">Built the Fetch &amp; Extract Prototype (fetch_extract_v1), a specialized service that safely fetches web page content and converts it into deterministic, clean text to support a Research Agent platform's evidence referencing. The core problem it solves: for durable citations like "Price: $19.99 at characters 802-817" to stay valid, the same HTML must always produce the exact same text and character offsets.</p>
+          <h3 class="font-semibold mb-2">Key Features:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>SSRF protection layer (ssrf.py): scheme validation, DNS resolution before connecting, private/reserved IP blocking (IPv4 &amp; IPv6), a domain allowlist, and recursive validation of every redirect</li>
+            <li>Deterministic text extraction pipeline (extract.py): BeautifulSoup + lxml parsing, fixed DOM traversal order, strict whitespace normalization, and removal of volatile elements (script, style, nav, footer)</li>
+            <li>Headless browser fetching via Playwright (Chromium) to correctly render JavaScript-heavy pages</li>
+            <li>SHA256 content hashing so re-fetches can verify whether stored offsets are still valid</li>
+            <li>FastAPI endpoints (/v1/fetch, /v1/fetch/evidence-example, /health) with auto-generated Swagger docs</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Results:</h3>
+          <ul class="list-disc pl-5">
+            <li>22/22 pytest tests passing, including 100-run offset-stability checks and known-offset regression tests</li>
+            <li>SSRF blocking verified against localhost, private IP ranges, and out-of-allowlist domains</li>
+            <li>Validated end-to-end against real sites (Books to Scrape, Wikipedia, GitHub Trending, Amazon)</li>
+            <li>All initial requirements satisfied: SSRF-safe fetching, clean text/title/heading/table/list extraction, and stable offsets with content-hash versioning</li>
+          </ul>
+        `,
+        tags: ['Upwork Project', 'FastAPI', 'Playwright', 'SSRF Protection', 'Python'],
+        links: [
+          { text: 'View Technical Documentation', url: 'fetch_extract_v1_technical_documentation.pdf', target: '_blank' }
+        ]
+      },
+      'subul-career-assistant': {
+        title: 'SUBUL AI Career Assistant',
+        image: null,
+        description: `
+          <p class="mb-4">Built as part of an internship at Smartovate, a London-based EdTech/HRTech startup, this is a multi-agent AI career assistant integrated into the SUBUL learning platform. It bridges the gap between skill development and employment by combining resume optimization, multi-source job aggregation, semantic CV-to-job matching, and explainable, personalized career guidance.</p>
+          <h3 class="font-semibold mb-2">Key Features:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Multi-agent architecture orchestrated with LangGraph: a Supervisor Agent routes requests to a CV Agent, Job Agent, and ATS Agent</li>
+            <li>CV Agent: resume extraction, deterministic baseline ATS scoring, LLM-based rewriting with an anti-hallucination guard that strips fabricated sections</li>
+            <li>Job Agent: real-time scraping across 14 job-board sources, cosine pre-filtering, skill-gap analysis, market overview, and a phased learning roadmap</li>
+            <li>ATS Agent: dimension-by-dimension job-specific compatibility scoring (skills, experience, education, job title, languages) plus job-tailored CV export</li>
+            <li>Bilingual (French/English) conversational assistant with context over the learner's profile and matches</li>
+          </ul>
+          <h3 class="font-semibold mb-2">Fine-Tuned Matching Model &amp; Results:</h3>
+          <ul class="list-disc pl-5">
+            <li>Custom bi-encoder regression model fine-tuned on top of MiniLM-L6-v2 for CV-to-job compatibility scoring</li>
+            <li>R² = 0.9890, MAE = 1.82 points on a held-out 22,500-pair test set, with no signs of overfitting</li>
+            <li>Outperforms a TF-IDF baseline by a wide margin: 47.6-point score separation vs 14.3, and NDCG@5 of 0.9981 vs 0.8498</li>
+            <li>Built with FastAPI, Next.js, Azure Cosmos DB, Azure PostgreSQL, and Azure OpenAI, following a hybrid Scrum/CRISP-ML(Q) methodology across 5 sprints</li>
+          </ul>
+        `,
+        tags: ['London Startup Project', 'LangGraph', 'Fine-tuned Embeddings', 'FastAPI', 'Next.js', 'Azure OpenAI'],
+        links: [
+          { text: 'View Full Report', url: 'subul%20platform.pdf', target: '_blank' }
         ]
       }
     };
@@ -1757,8 +2042,14 @@
       if (!project) return;
 
       document.getElementById('modalTitle').textContent = project.title;
-      document.getElementById('modalImage').src = project.image;
-      document.getElementById('modalImage').alt = project.title;
+      const modalImage = document.getElementById('modalImage');
+      if (project.image) {
+        modalImage.src = project.image;
+        modalImage.alt = project.title;
+        modalImage.style.display = '';
+      } else {
+        modalImage.style.display = 'none';
+      }
       
       // Set tags
       const tagsContainer = document.getElementById('modalTags');
